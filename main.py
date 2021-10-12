@@ -25,7 +25,7 @@ speaker = AudioDevice(input_device_index=AudioDevice.get_device_index("Stereo Mi
 try:
     while speaker.is_alive():
         time.sleep(1)
-        print(f"A/V delay: {time_lag: 0.2f} seconds", " " * 10, end='\r')
+        print(f"A/V delay: {time_lag * 1000:0.0f} ms", " " * 10, end='\r')
         time_lag = 0
 except KeyboardInterrupt:
     pass
